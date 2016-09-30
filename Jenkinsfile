@@ -6,7 +6,7 @@ node {
     def package_name = sh (
         script: 'git config --get remote.origin.url | grep -o "github.com.*"',
         returnStdout: true
-    ).trim()
+    )
 
     stage 'Check Conflicts'
     //sh "./build/steps/deploy/check-conflicts.sh"
